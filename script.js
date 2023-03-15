@@ -70,6 +70,48 @@ window.addEventListener('scroll', function() {
   });
 });
 
+
+/* DHANESH RAJ*/
+
+// Select the body element
+const body = document.querySelector('body');
+
+// Define an array of colors
+const colors = [
+  "#FF6B6B",
+  "#FFE66D",
+  "#3FBF3F",
+  "#1E90FF",
+  "#C0448F",
+  "#FF8C00",
+  "#4B0082",
+];
+
+// Function to generate a random gradient background
+function generateGradient() {
+  // Generate a random index to select two colors from the array
+  const randomIndex1 = Math.floor(Math.random() * colors.length);
+  const randomIndex2 = Math.floor(Math.random() * colors.length);
+
+  // Select the two colors from the array using the random indexes
+  const color1 = colors[randomIndex1];
+  const color2 = colors[randomIndex2];
+
+  // Create the gradient background using the selected colors
+  const gradient = `linear-gradient(45deg, ${color1}, ${color2})`;
+
+  // Set the background of the body element to the gradient
+  body.style.background = gradient;
+}
+
+// Call the generateGradient function on page load
+generateGradient();
+
+// Call the generateGradient function whenever the user scrolls
+window.addEventListener('scroll', generateGradient);
+
+
+
 /* Creative Effects */
 const creativeSections = document.querySelectorAll('.creative-section');
 

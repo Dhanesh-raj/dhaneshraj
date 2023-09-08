@@ -1,5 +1,6 @@
-# dhaneshraj
-# Hi there! 👋
+# Dhanesh Raj
+
+Hi there! 👋
 
 I'm Dhanesh Raj, a passionate research student from Amrita Vishwa Vidyapeetham.
 
@@ -8,15 +9,12 @@ I'm Dhanesh Raj, a passionate research student from Amrita Vishwa Vidyapeetham.
 - 💬 Ask me about Wireless Propagation, ML, Deep Learning OpenRAN, LATEX, Data Analysis.
 - 📫 How to reach me: dhaneshraj@am.amrita.edu.
 
+## 🌐 Check out my personal website: [dhanesh-raj.github.io/dhaneshraj/](https://dhanesh-raj.github.io/dhaneshraj/)
 
-## 🌐 Check out my personal website: [yourwebsite.com](https://yourwebsite.com)
-
-![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=yourgithubusername&show_icons=true&theme=radical)
+![Dhanesh Raj's GitHub stats](https://github-readme-stats.vercel.app/api?username=dhanesh-raj&show_icons=true&theme=radical)
 
 ### Languages and Tools:
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yourgithubusername&layout=compact)](https://github.com/yourgithubusername/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dhanesh-raj&layout=compact)](https://github.com/dhanesh-raj/dhaneshraj)
 
----
-
-⭐️ From [yourgithubusername](https://github.com/yourgithubusername)
+⭐️ From [dhanesh-raj](https://github.com/dhanesh-raj)

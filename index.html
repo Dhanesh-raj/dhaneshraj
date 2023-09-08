@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanesh Raj's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 
 <body>
@@ -40,51 +41,116 @@
     <!-- Interactive Timeline -->
     <section id="timeline">
         <h2>My Academic Journey</h2>
-        <div class="timeline-content">
-            <!-- Placeholder for the timeline. You'll integrate TimelineJS or a similar library here. -->
-        </div>
+        <div id="timeline-embed"></div>
+        <script type="text/javascript">
+            var timeline_config = {
+                width: "100%",
+                height: "600",
+                source: 'path_to_your_json_or_google_sheet',
+                embed_id: 'timeline-embed'
+            }
+        </script>
+        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
     </section>
 
-    <!-- Publication Carousel -->
-    <section id="publications">
-        <h2>Publications</h2>
-        <div class="carousel">
-            <!-- Placeholder for the carousel. You'll integrate Slick Carousel or a similar library here. -->
-            <div class="carousel-item">
-                <img src="project1.jpg" alt="Sample Publication">
-                <p>Publication Title</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Animated Infographics -->
+    <!-- D3.js Infographics -->
     <section id="infographics">
         <h2>Research Infographics</h2>
-        <!-- Placeholder for infographics. You'll integrate D3.js or a similar library here. -->
+        <svg id="infographic"></svg>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script>
+            // Sample data and D3.js code for a basic bar chart
+            var data = [4, 8, 15, 16, 23, 42];
+            var width = 420, barHeight = 20;
+
+            var x = d3.scaleLinear()
+                .domain([0, d3.max(data)])
+                .range([0, width]);
+
+            var chart = d3.select("#infographic")
+                .attr("width", width)
+                .attr("height", barHeight * data.length);
+
+            var bar = chart.selectAll("g")
+                .data(data)
+                .enter().append("g")
+                .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+            bar.append("rect")
+                .attr("width", x)
+                .attr("height", barHeight - 1);
+
+            bar.append("text")
+                .attr("x", function(d) { return x(d) - 3; })
+                .attr("y", barHeight / 2)
+                .attr("dy", ".35em")
+                .text(function(d) { return d; });
+        </script>
+    </section>
+
+    <!-- Lightbox2 Gallery -->
+    <section id="gallery">
+        <h2>Research Gallery</h2>
+        <div class="gallery-content">
+            <a href="path_to_large_image1.jpg" data-lightbox="gallery" data-title="Image 1 Caption">
+                <img src="path_to_thumbnail_image1.jpg" alt="Image 1">
+            </a>
+            <!-- Add more gallery items as needed -->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
     </section>
 
     <!-- Interactive CV -->
     <section id="cv">
         <h2>Curriculum Vitae</h2>
-        <!-- Placeholder for the interactive CV. -->
         <div class="cv-content">
-            <!-- CV sections will go here -->
+            <div class="cv-section">
+                <h3>Education</h3>
+                <div class="details">
+                    Details about your education...
+                </div>
+            </div>
+            <!-- Add more CV sections as needed -->
         </div>
     </section>
 
-    <!-- Lightbox Gallery -->
-    <section id="gallery">
-        <h2>Research Gallery</h2>
-        <!-- Placeholder for the gallery. You'll integrate Lightbox2 or a similar library here. -->
-        <div class="gallery-content">
-            <!-- Gallery items will go here -->
-        </div>
-    </section>
-
-    <!-- Dynamic Word Cloud -->
+    <!-- d3-cloud Word Cloud -->
     <section id="word-cloud">
         <h2>Research Word Cloud</h2>
-        <!-- Placeholder for the word cloud. You'll integrate d3-cloud or a similar library here. -->
+        <svg id="wordCloud" width="500" height="500"></svg>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
+        <script>
+            // Sample data and d3-cloud code for a basic word cloud
+            var words = ["research", "data", "analysis", "publication", "experiment", "results"];
+            var layout = d3.layout.cloud()
+                .size([500, 500])
+                .words(words.map(function(d) {
+                    return {text: d, size: 10 + Math.random() * 90};
+                }))
+                .padding(5)
+                .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                .font("Impact")
+                .fontSize(function(d) { return d.size; })
+                .on("end", draw);
+
+            layout.start();
+
+            function draw(words) {
+                d3.select("#wordCloud").append("g")
+                    .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+                    .selectAll("text")
+                    .data(words)
+                    .enter().append("text")
+                    .style("font-size", function(d) { return d.size + "px"; })
+                    .style("font-family", "Impact")
+                    .attr("text-anchor", "middle")
+                    .attr("transform", function(d) {
+                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                    })
+                    .text(function(d) { return d.text; });
+            }
+        </script>
     </section>
 
     <!-- Footer -->

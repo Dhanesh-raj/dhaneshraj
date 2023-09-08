@@ -1,0 +1,28 @@
+$primary-color: #333;
+$secondary-color: #666;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Add more styles for other sections...

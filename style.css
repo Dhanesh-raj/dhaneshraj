@@ -1,0 +1,103 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .profile-section img {
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+header .profile-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header .profile-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header .social-media a {
+    margin: 0 10px;
+    color: #f4f4f4;
+    font-weight: bold;
+}
+
+header .social-media a:hover {
+    color: #007BFF;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f4f4f4;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007BFF;
+}
+
+#timeline, #publications, #infographics, #cv, #gallery, #word-cloud {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel .carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+}
+
+.carousel .carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel .carousel-item p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+}

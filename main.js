@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var carousel = document.querySelector('.carousel');
         if (!carousel) return;
 
-        // Placeholder for carousel initialization.
         var currentIndex = 0;
         var items = carousel.querySelectorAll('.carousel-item');
         var nextButton = carousel.querySelector('.next');

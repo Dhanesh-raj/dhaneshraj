@@ -76,13 +76,13 @@ section h2 {
 
 .carousel {
     display: flex;
-    overflow-x: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carousel .carousel-item {
-    flex: 0 0 auto;
-    width: 200px;
-    margin-right: 15px;
+    flex: 1;
+    margin: 0 15px;
 }
 
 .carousel .carousel-item img {
@@ -93,6 +93,14 @@ section h2 {
 .carousel .carousel-item p {
     text-align: center;
     margin-top: 10px;
+}
+
+.cv-content .cv-section h3 {
+    cursor: pointer;
+}
+
+.cv-content .cv-section .details {
+    display: none;
 }
 
 footer {

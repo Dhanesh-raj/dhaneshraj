@@ -1,164 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanesh Raj's Portfolio</title>
+    <title>GitHub Personal Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
-
 <body>
-    <!-- Main Page -->
     <header>
-        <div class="profile-section">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h1>Dhanesh Raj</h1>
-            <p>Short Bio: A passionate researcher and academician...</p>
+        <div class="header-container">
+            <div class="logo">Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#email">Email</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#research">Research Interests</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <!-- Social Media Links with Hover Effects -->
-        <div class="social-media">
-            <a href="link_to_linkedin" class="linkedin">LinkedIn</a>
-            <a href="link_to_google_scholar" class="google-scholar">Google Scholar</a>
-            <a href="link_to_researchgate" class="researchgate">ResearchGate</a>
-            <a href="link_to_twitter" class="twitter">Twitter</a>
-        </div>
-
-        <nav>
-            <!-- Navigation Bar -->
-            <ul>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-                <li><a href="resume.pdf" download>Resume</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <!-- Interactive Timeline -->
-    <section id="timeline">
-        <h2>My Academic Journey</h2>
-        <div id="timeline-embed"></div>
-        <script type="text/javascript">
-            var timeline_config = {
-                width: "100%",
-                height: "600",
-                source: 'path_to_your_json_or_google_sheet',
-                embed_id: 'timeline-embed'
-            }
-        </script>
-        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-    </section>
-
-    <!-- D3.js Infographics -->
-    <section id="infographics">
-        <h2>Research Infographics</h2>
-        <svg id="infographic"></svg>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script>
-            // Sample data and D3.js code for a basic bar chart
-            var data = [4, 8, 15, 16, 23, 42];
-            var width = 420, barHeight = 20;
-
-            var x = d3.scaleLinear()
-                .domain([0, d3.max(data)])
-                .range([0, width]);
-
-            var chart = d3.select("#infographic")
-                .attr("width", width)
-                .attr("height", barHeight * data.length);
-
-            var bar = chart.selectAll("g")
-                .data(data)
-                .enter().append("g")
-                .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
-
-            bar.append("rect")
-                .attr("width", x)
-                .attr("height", barHeight - 1);
-
-            bar.append("text")
-                .attr("x", function(d) { return x(d) - 3; })
-                .attr("y", barHeight / 2)
-                .attr("dy", ".35em")
-                .text(function(d) { return d; });
-        </script>
-    </section>
-
-    <!-- Lightbox2 Gallery -->
-    <section id="gallery">
-        <h2>Research Gallery</h2>
-        <div class="gallery-content">
-            <a href="path_to_large_image1.jpg" data-lightbox="gallery" data-title="Image 1 Caption">
-                <img src="path_to_thumbnail_image1.jpg" alt="Image 1">
-            </a>
-            <!-- Add more gallery items as needed -->
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-    </section>
-
-    <!-- Interactive CV -->
-    <section id="cv">
-        <h2>Curriculum Vitae</h2>
-        <div class="cv-content">
-            <div class="cv-section">
-                <h3>Education</h3>
-                <div class="details">
-                    Details about your education...
-                </div>
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h1>Hello, I'm Ariadne Snyder</h1>
+                <p>I am an energetic and passionate college student working towards a communications degree at Murrayfield School of Marketing. I aim to use my skills in writing, photography, and public relations in a summer internship at your organization.</p>
             </div>
-            <!-- Add more CV sections as needed -->
-        </div>
-    </section>
-
-    <!-- d3-cloud Word Cloud -->
-    <section id="word-cloud">
-        <h2>Research Word Cloud</h2>
-        <svg id="wordCloud" width="500" height="500"></svg>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
-        <script>
-            // Sample data and d3-cloud code for a basic word cloud
-            var words = ["research", "data", "analysis", "publication", "experiment", "results"];
-            var layout = d3.layout.cloud()
-                .size([500, 500])
-                .words(words.map(function(d) {
-                    return {text: d, size: 10 + Math.random() * 90};
-                }))
-                .padding(5)
-                .rotate(function() { return ~~(Math.random() * 2) * 90; })
-                .font("Impact")
-                .fontSize(function(d) { return d.size; })
-                .on("end", draw);
-
-            layout.start();
-
-            function draw(words) {
-                d3.select("#wordCloud").append("g")
-                    .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
-                    .selectAll("text")
-                    .data(words)
-                    .enter().append("text")
-                    .style("font-size", function(d) { return d.size + "px"; })
-                    .style("font-family", "Impact")
-                    .attr("text-anchor", "middle")
-                    .attr("transform", function(d) {
-                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-                    })
-                    .text(function(d) { return d.text; });
-            }
-        </script>
-    </section>
-
-    <!-- Footer -->
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.</p>
+            </div>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.</p>
+            </div>
+            <div class="project">
+                <h3>Project Title 3</h3>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across clearly yet concisely.</p>
+            </div>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication">
+                <h3>Paper Title 1</h3>
+                <p>Link 1</p>
+            </div>
+            <div class="publication">
+                <h3>Paper Title 2</h3>
+                <p>Link 2</p>
+            </div>
+            <div class="publication">
+                <h3>Paper Title 3</h3>
+                <p>Link 3</p>
+            </div>
+        </section>
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>Your Sub-Header Goes Here</p>
+            <p>Your Sub-Header Goes Here</p>
+            <p>Your Sub-Header Goes Here</p>
+        </section>
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>Add details about your teaching experience here.</p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2023 Dhanesh Raj. All rights reserved.</p>
+        <p>&copy; 2024 Ariadne Snyder. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
-
 </html>

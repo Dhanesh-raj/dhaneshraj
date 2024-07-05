@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     // Initialize Publication Carousel
     function initCarousel() {
         var carousel = document.querySelector('.carousel');
@@ -29,21 +28,5 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     }
 
-    // Interactive CV Functionality
-    function initInteractiveCV() {
-        var cvSections = document.querySelectorAll('.cv-section');
-
-        cvSections.forEach(function(section) {
-            section.addEventListener('click', function() {
-                var details = section.querySelector('.details');
-                if (details) {
-                    details.style.display = details.style.display === 'none' ? 'block' : 'none';
-                }
-            });
-        });
-    }
-
-    // Call initialization functions
     initCarousel();
-    initInteractiveCV();
 });

@@ -148,3 +148,33 @@ footer .social-media a {
 footer .social-media a:hover {
     text-decoration: underline;
 }
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffeb3b;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}

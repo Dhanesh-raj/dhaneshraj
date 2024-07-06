@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research-interests">Research Interests</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#awards">Awards/Honor/Services</a></li>
             </ul>
         </nav>
     </header>
@@ -26,10 +27,10 @@
                 <p>Senior Research Associate</p>
                 <button>Email me</button>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/dhaneshraj/"><img src="./linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="https://www.facebook.com/imdhaneshraj"><img src="./facebook-icon.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/dhanesh.raj/"><img src="./instagram-icon.png" alt="Instagram"></a>
-                    <a href="https://github.com/Dhanesh-raj"><img src="./github-icon.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/dhaneshraj/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/imdhaneshraj"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/dhanesh.raj/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Dhanesh-raj"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="contact-info">
                     <p>Address:<br>
@@ -47,9 +48,9 @@
                 <h2>About Me</h2>
                 <p>Currently pursuing my Ph.D. in Computer Engineering under Dr. Maneesha V Ramesh with research interests in wireless networks and pervasive computing, specifically Quality of Service (QoS) in marine 5G heterogeneous networks.</p>
                 <div class="scholar-links">
-                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ"><img src="./google-scholar-icon.png" alt="Google Scholar"></a>
-                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj"><img src="./researchgate-icon.png" alt="ResearchGate"></a>
-                    <a href="https://orcid.org/0000-0002-0558-1719"><img src="./orcid-icon.png" alt="Orcid"></a>
+                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://orcid.org/0000-0002-0558-1719"><i class="fab fa-orcid"></i></a>
                 </div>
                 <div class="resume-portfolio-buttons">
                     <a href="./resume.pdf" class="btn">Resume</a>
@@ -96,5 +97,17 @@
     <footer>
         <p>&copy; 2024 Dhanesh Raj All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Add animation to social icons
+        document.querySelectorAll('.social-icons a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.querySelector('i').classList.add('fa-bounce');
+            });
+            link.addEventListener('mouseout', () => {
+                link.querySelector('i').classList.remove('fa-bounce');
+            });
+        });
+    </script>
 </body>
 </html>

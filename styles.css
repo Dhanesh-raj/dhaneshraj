@@ -29,6 +29,11 @@ nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
 }
 
 main {
@@ -85,16 +90,22 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #fdd835;
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
+.social-icons a {
     margin: 0 10px;
+    color: #000;
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
 }
 
 .contact-info p {
@@ -110,10 +121,15 @@ button:hover {
     text-decoration: underline;
 }
 
-.scholar-links img {
-    width: 30px;
-    height: 30px;
+.scholar-links a {
     margin: 0 10px;
+    color: #000;
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scholar-links a:hover {
+    transform: scale(1.2);
 }
 
 .resume-portfolio-buttons .btn {
@@ -126,6 +142,7 @@ button:hover {
     text-decoration: none;
     margin: 10px 0;
     text-align: center;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .resume-portfolio-buttons .btn:hover {
@@ -177,4 +194,14 @@ button.prev {
 
 button.next {
     right: 0;
+}
+
+.fa-bounce {
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-10%);
+    }
 }

@@ -82,7 +82,7 @@ p {
     margin: 10px 0;
 }
 
-button {
+button.btn {
     background-color: #ffeb3b;
     color: #000;
     padding: 10px 20px;
@@ -91,10 +91,41 @@ button {
     cursor: pointer;
     margin-bottom: 20px;
     transition: background-color 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-button:hover {
+button.btn:hover {
     background-color: #fdd835;
+}
+
+button.btn.glow {
+    box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+}
+
+button.btn.glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+button.btn.glow:hover::before {
+    animation: glow-animation 2s linear infinite;
+}
+
+@keyframes glow-animation {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(100%, 100%) rotate(45deg);
+    }
 }
 
 .social-icons a {
@@ -143,10 +174,32 @@ button:hover {
     margin: 10px 0;
     text-align: center;
     transition: background-color 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .resume-portfolio-buttons .btn:hover {
     background-color: #fdd835;
+}
+
+.resume-portfolio-buttons .btn.glow {
+    box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+}
+
+.resume-portfolio-buttons .btn.glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.resume-portfolio-buttons .btn.glow:hover::before {
+    animation: glow-animation 2s linear infinite;
 }
 
 footer {
@@ -180,28 +233,4 @@ footer .social-media a:hover {
 button.prev, button.next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: #ffeb3b;
-    color: #000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button.prev {
-    left: 0;
-}
-
-button.next {
-    right: 0;
-}
-
-.fa-bounce {
-    animation: bounce 0.5s ease infinite alternate;
-}
-
-@keyframes bounce {
-    to {
-        transform: translateY(-10%);
-    }
-}
+    transform

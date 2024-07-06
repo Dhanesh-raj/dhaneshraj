@@ -15,13 +15,23 @@
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="research-interests.html">Research Interests</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="awards.html">Awards/Honor/Services</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="awards">
             <h2>Awards/Honor/Services</h2>
-            <!-- Add content for awards/honor/services -->
+            <ul>
+                <li>ICDCN 2023 Travel Conference Grant Award Winner</li>
+                <li>Published Papers in ICDCN -2023, 2017, COMSNETS - 2020 , INFOCOM, WiOpt, Springer journal - CSI Transactions on ICT</li>
+                <li>Phase II Winner - 5G Hackathon 2022, Dept of Telecommunication - Govt of India for "Public Safety and Mission Critical Services for Fishermen at Sea"</li>
+                <li>Phase I Winner- 5G Hackathon 2021, Dept of Telecommunication - Govt of India for "Public Safety and Mission Critical Services for Fishermen at Sea"</li>
+                <li>COMSNETS 2020 Travel Conference Grant Award Winner</li>
+                <li>ITRA Research Fellowship for MICRONET project</li>
+                <li>Amrita Bright Idea Award Winner 2013 for innovative idea on "Wireless Real Artificial Urinary Sphincter Control for Urinary Incontinence"</li>
+                <li>Amrita Innovation Seed Grant Winner 2013 for "Wireless Real Artificial Urinary Sphincter Control for Urinary Incontinence"</li>
+            </ul>
         </section>
     </main>
     <footer>

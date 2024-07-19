@@ -33,5 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     }
 
+    // Initialize hover animation for social icons
+    function initSocialIcons() {
+        const socialIcons = document.querySelectorAll('.social-icons a, .scholar-links a');
+        
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                icon.classList.add('fa-bounce');
+            });
+            icon.addEventListener('mouseout', () => {
+                icon.classList.remove('fa-bounce');
+            });
+        });
+    }
+
     initCarousel();
+    initSocialIcons();
 });

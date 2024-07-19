@@ -61,8 +61,8 @@ nav ul li a:focus {
 }
 
 .social-media img {
-    width: 10px; /* Adjust icon size */
-    height: 10px; /* Adjust icon size */
+    width: 2px; /* Adjust icon size */
+    height: 2px; /* Adjust icon size */
 }
 
 .social-media a:hover {
@@ -71,8 +71,8 @@ nav ul li a:focus {
 
 .social-icons img,
 .scholar-links img {
-    width: 10px; /* Adjust icon size */
-    height: 10px; /* Adjust icon size */
+    width: 2px; /* Adjust icon size */
+    height: 2px; /* Adjust icon size */
 }
 
 /* Main content */

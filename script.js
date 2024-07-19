@@ -1,29 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Publication Carousel
     function initCarousel() {
-        var carousel = document.querySelector('.carousel');
+        const carousel = document.querySelector('.carousel');
         if (!carousel) return;
 
-        var currentIndex = 0;
-        var items = carousel.querySelectorAll('.carousel-item');
-        var nextButton = carousel.querySelector('.next');
-        var prevButton = carousel.querySelector('.prev');
+        let currentIndex = 0;
+        const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+        const nextButton = carousel.querySelector('.next');
+        const prevButton = carousel.querySelector('.prev');
 
         function updateCarousel() {
-            items.forEach(function(item, index) {
+            items.forEach((item, index) => {
                 item.style.display = index === currentIndex ? 'block' : 'none';
+                item.setAttribute('aria-hidden', index !== currentIndex);
             });
         }
 
-        nextButton && nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
-        });
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+            });
+        }
 
-        prevButton && prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
-        });
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                updateCarousel();
+            });
+        }
 
         updateCarousel();
     }

@@ -69,6 +69,7 @@ nav ul li a:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 /* Main content */
@@ -94,6 +95,7 @@ section {
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    z-index: 1; /* Ensure the content is above the video */
 }
 
 .intro-left {
@@ -157,18 +159,17 @@ button.btn.glow {
 
 /* Social icons */
 .social-icons a {
-    font-size: 1rem; /* Increase icon size */
     margin: 0 10px;
     transition: transform 0.3s;
 }
 
 .social-icons img {
-    width: 10px; /* Set icon size */
-    height: 10px; /* Set icon size */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
 }
 
 .social-icons a:hover {
-    transform: scale(0.5);
+    transform: scale(1.2);
 }
 
 /* Scholar links */
@@ -179,19 +180,16 @@ button.btn.glow {
 }
 
 .scholar-links a {
-    font-size: 2.5rem; /* Increase icon size */
     margin-right: 15px;
-    color: var(--primary-color);
-    transition: color 0.3s, transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .scholar-links img {
-    width: 40px; /* Set icon size */
-    height: 40px; /* Set icon size */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
 }
 
 .scholar-links a:hover {
-    color: var(--secondary-color);
     transform: scale(1.2);
 }
 

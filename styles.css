@@ -157,18 +157,18 @@ button.btn.glow {
 
 /* Social icons */
 .social-icons a {
-    font-size: 2.5rem; /* Increase icon size */
+    font-size: 1rem; /* Increase icon size */
     margin: 0 10px;
     transition: transform 0.3s;
 }
 
 .social-icons img {
-    width: 40px; /* Set icon size */
-    height: 40px; /* Set icon size */
+    width: 10px; /* Set icon size */
+    height: 10px; /* Set icon size */
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+    transform: scale(0.5);
 }
 
 /* Scholar links */

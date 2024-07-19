@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             items.forEach((item, index) => {
                 item.style.display = index === currentIndex ? 'block' : 'none';
                 item.setAttribute('aria-hidden', index !== currentIndex);
+                item.classList.add('animate__animated', 'animate__fadeIn');
             });
         }
 
@@ -39,14 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
         
         socialIcons.forEach(icon => {
             icon.addEventListener('mouseover', () => {
-                icon.classList.add('fa-bounce');
+                icon.classList.add('animate__animated', 'animate__tada');
             });
             icon.addEventListener('mouseout', () => {
-                icon.classList.remove('fa-bounce');
+                icon.classList.remove('animate__tada');
+            });
+        });
+    }
+
+    // Add loading animations
+    function initLoadingAnimations() {
+        const elementsToAnimate = document.querySelectorAll('.animate-on-load');
+        elementsToAnimate.forEach(element => {
+            element.classList.add('animate__animated', 'animate__fadeInUp');
+        });
+    }
+
+    // Add click animations
+    function initClickAnimations() {
+        const clickableElements = document.querySelectorAll('.click-animate');
+        clickableElements.forEach(element => {
+            element.addEventListener('click', () => {
+                element.classList.add('animate__animated', 'animate__rubberBand');
+                setTimeout(() => {
+                    element.classList.remove('animate__rubberBand');
+                }, 1000); // Duration of the animation
             });
         });
     }
 
     initCarousel();
     initSocialIcons();
+    initLoadingAnimations();
+    initClickAnimations();
 });

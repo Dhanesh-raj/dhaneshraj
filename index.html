@@ -9,38 +9,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <header>
+    <header class="animate-on-load">
         <nav>
             <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
+                <li><a href="projects.html" class="click-animate">Projects</a></li>
+                <li><a href="publications.html" class="click-animate">Publications</a></li>
+                <li><a href="research-interests.html" class="click-animate">Research Interests</a></li>
+                <li><a href="teaching.html" class="click-animate">Teaching</a></li>
+                <li><a href="awards.html" class="click-animate">Awards/Honor/Services</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="intro">
+        <section class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="intro animate-on-load">
             <div class="intro-left">
-                <img src="profile.jpg" alt="Profile Picture of Dhanesh Raj" class="profile-img" loading="lazy">
+                <img src="profile.jpg" alt="Profile Picture of Dhanesh Raj" class="profile-img click-animate" loading="lazy">
                 <h1 class="animate__animated animate__slideInDown">Dhanesh Raj</h1>
                 <p class="animate__animated animate__fadeInUp">Senior Research Associate</p>
-                <a href="mailto:mailid@gmail.com" class="btn animate__animated animate__fadeInUp">Email me</a>
+                <a href="mailto:mailid@gmail.com" class="btn click-animate animate__animated animate__fadeInUp">Email me</a>
                 <div class="social-icons animate__animated animate__fadeInUp">
-                    <a href="https://www.linkedin.com/in/dhaneshraj/" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/dhanesh.raj/" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
-                    <a href="https://github.com/Dhanesh-raj" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dhaneshraj" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/dhanesh.raj" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://github.com/Dhanesh-raj" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><img src="github-icon.png" alt="GitHub"></a>
                 </div>
                 <div class="scholar-links animate__animated animate__fadeInUp">
-                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar"><img src="google-scholar-icon.png" alt="Google Scholar"></a>
-                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate"><img src="researchgate-icon.png" alt="ResearchGate"></a>
-                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID"><img src="orcid-icon.png" alt="ORCID"></a>
+                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><img src="google-scholar-icon.png" alt="Google Scholar"></a>
+                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate" target="_blank" rel="noopener noreferrer"><img src="researchgate-icon.png" alt="ResearchGate"></a>
+                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID" target="_blank" rel="noopener noreferrer"><img src="orcid-icon.png" alt="ORCID"></a>
                 </div>
                 <div class="resume-portfolio-buttons animate__animated animate__fadeInUp">
-                    <a href="./resume.pdf" class="btn glow">Resume</a>
-                    <a href="#portfolio" class="btn glow">Portfolio</a>
+                    <a href="./resume.pdf" class="btn glow click-animate">Resume</a>
+                    <a href="#portfolio" class="btn glow click-animate">Portfolio</a>
                 </div>
                 <div class="contact-info animate__animated animate__fadeInUp">
                     <p>Address:<br>
@@ -91,12 +97,6 @@
                     </ul>
                 </section>
             </div>
-        </section>
-        <section class="video-background">
-            <video autoplay muted loop id="bg-video" onclick="window.location.href='index.html';">
-                <source src="background.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </section>
     </main>
     <footer>

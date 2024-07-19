@@ -1,16 +1,32 @@
+/* Variables for easy customization */
+:root {
+    --primary-color: #ffeb3b;
+    --secondary-color: #fdd835;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 36px;
+    --font-size-medium: 28px;
+    --font-size-small: 16px;
+    --border-radius: 10px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
+/* Header */
 header {
     background-color: #fff;
     padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 nav ul {
@@ -32,10 +48,12 @@ nav ul li a {
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    color: #ffeb3b;
+nav ul li a:hover,
+nav ul li a:focus {
+    color: var(--primary-color);
 }
 
+/* Main content */
 main {
     padding: 40px 20px;
 }
@@ -44,14 +62,16 @@ section {
     margin-bottom: 40px;
     background-color: #fff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Introduction section */
 .intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .intro-left, .intro-right {
@@ -67,23 +87,25 @@ section {
     margin-bottom: 20px;
 }
 
+/* Headings */
 h1 {
-    font-size: 36px;
+    font-size: var(--font-size-large);
     margin: 0;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: var(--font-size-medium);
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
+    font-size: var(--font-size-small);
     margin: 10px 0;
 }
 
+/* Button styles */
 button.btn {
-    background-color: #ffeb3b;
+    background-color: var(--primary-color);
     color: #000;
     padding: 10px 20px;
     border: none;
@@ -95,12 +117,26 @@ button.btn {
     overflow: hidden;
 }
 
-button.btn:hover {
-    background-color: #fdd835;
+button.btn:hover,
+button.btn:focus {
+    background-color: var(--secondary-color);
 }
 
 button.btn.glow {
-    box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
 }
 
-button.btn
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

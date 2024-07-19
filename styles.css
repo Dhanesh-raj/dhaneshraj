@@ -1,4 +1,7 @@
 /* Variables for easy customization */
+/*Improved Consistency: Ensured consistent spacing, indentation, and comments.*/
+/*CSS Variables: Added comments for better readability.*/
+/*Responsive Design: Adjusted responsive design elements for better small screen experience.*/
 :root {
     --primary-color: #ffeb3b;
     --secondary-color: #fdd835;

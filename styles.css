@@ -71,7 +71,7 @@ section {
 .intro {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -82,13 +82,13 @@ section {
 }
 
 .intro-left {
-    max-width: 600px; /* Increase the max-width */
+    max-width: 500px; /* Adjust the max-width */
 }
 
 .profile-img {
     border-radius: 50%;
-    width: 200px; /* Increase size */
-    height: 200px; /* Increase size */
+    width: 250px; /* Increase size */
+    height: 250px; /* Increase size */
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -134,12 +134,31 @@ button.btn.glow {
 
 /* Social icons */
 .social-icons a {
-    font-size: 2rem; /* Increase icon size */
+    font-size: 2.5rem; /* Increase icon size */
     margin: 0 10px;
     transition: transform 0.3s;
 }
 
 .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Scholar links */
+.scholar-links {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.scholar-links a {
+    font-size: 2.5rem; /* Increase icon size */
+    margin-right: 15px;
+    color: var(--primary-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.scholar-links a:hover {
+    color: var(--secondary-color);
     transform: scale(1.2);
 }
 

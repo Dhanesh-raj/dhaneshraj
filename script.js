@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize hover animation for social icons
     function initSocialIcons() {
-        const socialIcons = document.querySelectorAll('.social-icons a, .scholar-links a');
+        const socialIcons = document.querySelectorAll('.social-icons a, .scholar-links a, .btn');
         
         socialIcons.forEach(icon => {
             icon.addEventListener('mouseover', () => {

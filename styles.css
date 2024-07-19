@@ -3,7 +3,7 @@
     --primary-color: #ffeb3b;
     --secondary-color: #fdd835;
     --text-color: #333;
-    --background-color: #f9f9f9;
+    --background-color: #ededdf;
     --font-family: 'Poppins', sans-serif;
     --font-size-base: 16px;
     --font-size-large: 36px;
@@ -56,6 +56,9 @@ nav ul li a:focus {
 
 /* Main content */
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -70,25 +73,28 @@ section {
 /* Introduction section */
 .intro {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-}
-
-.intro-left, .intro-right {
-    flex: 1;
-    padding: 20px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .intro-left {
-    max-width: 500px; /* Adjust the max-width */
+    flex: 1;
+    padding-right: 20px;
+    max-width: 400px;
+}
+
+.intro-right {
+    flex: 2;
+    padding-left: 20px;
+    max-width: calc(100% - 420px); /* Adjusting for intro-left's max-width and padding */
 }
 
 .profile-img {
     border-radius: 50%;
-    width: 250px; /* Increase size */
-    height: 250px; /* Increase size */
+    width: 200px; /* Adjust size */
+    height: 200px; /* Adjust size */
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -169,11 +175,13 @@ button.btn.glow {
         text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
+    .intro-left, .intro-right {
+        max-width: 100%;
+        padding: 0;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .profile-img {
+        width: 150px; /* Adjust size for smaller screens */
+        height: 150px; /* Adjust size for smaller screens */
     }
 }

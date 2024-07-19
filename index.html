@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Resume</title>
-    <link rel="stylesheet" href="styles.min.css"> <!-- Minified CSS -->
+    <title>Dhanesh Raj - Personal Resume</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
@@ -12,15 +12,21 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#research-interests">Research Interests</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#awards">Awards/Honor/Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="research-interests.html">Research Interests</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="awards.html">Awards/Honor/Services</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="video-background">
+            <video autoplay muted loop id="bg-video" onclick="window.location.href='index.html';">
+                <source src="background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
         <section class="intro">
             <div class="intro-left">
                 <img src="profile.jpg" alt="Profile Picture of Dhanesh Raj" class="profile-img" loading="lazy">
@@ -28,15 +34,15 @@
                 <p class="animate__animated animate__fadeInUp">Senior Research Associate</p>
                 <a href="mailto:mailid@gmail.com" class="btn animate__animated animate__fadeInUp">Email me</a>
                 <div class="social-icons animate__animated animate__fadeInUp">
-                    <a href="https://www.linkedin.com/in/dhaneshraj/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/dhanesh.raj/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/dhaneshraj/" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/dhanesh.raj/" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
                     <a href="https://github.com/Dhanesh-raj" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="scholar-links animate__animated animate__fadeInUp">
-                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar"><img src="google-scholar-icon.png" alt="Google Scholar"></a>
+                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate"><img src="researchgate-icon.png" alt="ResearchGate"></a>
+                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID"><img src="orcid-icon.png" alt="ORCID"></a>
                 </div>
                 <div class="resume-portfolio-buttons animate__animated animate__fadeInUp">
                     <a href="./resume.pdf" class="btn glow">Resume</a>
@@ -96,7 +102,6 @@
     <footer>
         <p>&copy; 2024 Dhanesh Raj All Rights Reserved.</p>
     </footer>
-
-    <script defer src="script.min.js"></script> <!-- Minified JS -->
+    <script defer src="script.js"></script>
 </body>
 </html>

@@ -6,22 +6,36 @@
     <title>Publications - Dhanesh Raj</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <header class="sticky-header">
         <nav>
-            <ul>
+            <div class="logo">Dhanesh Raj</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
+                <li><a href="research-interests.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
+                <li><a href="awards.html">Awards</a></li>
             </ul>
         </nav>
     </header>
+    
+    <nav aria-label="breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Publications</li>
+        </ul>
+    </nav>
+    
     <main>
-        <section id="publications">
+        <section id="publications" class="section">
             <h2>Publications</h2>
             <ul class="publication-list">
                 <li>Sruthy Anand, Dhanesh Raj, A.M. Abhishek Sai, Sethuraman N Rao, and Maneesha V Ramesh. 2023. "<i>Techno-Social Synergy for Disaster Resilience in Coastal Communities: A Sustainable Approach</i>", In Proceedings of the 24th International Conference on Distributed Computing and Networking (ICDCN '23). <a href="https://doi.org/10.1145/3571306.3571437">Paper</a></li>
@@ -46,15 +60,14 @@
             </ul>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/dhaneshraj" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://www.facebook.com/imdhaneshraj" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/dhanesh.raj/" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="https://github.com/Dhanesh-raj" target="_blank" rel="noopener noreferrer"><img src="github-icon.png" alt="GitHub"></a>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dhanesh.raj" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
-    <script defer src="script.js"></script>
 </body>
 </html>
+

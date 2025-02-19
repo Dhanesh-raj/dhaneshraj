@@ -3,213 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanesh Raj | Research Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Base Styles */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #ecf0f1;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--primary-color);
-        }
-
-        /* Navigation */
-        .navbar {
-            background-color: var(--primary-color);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Homepage */
-        .hero {
-            padding: 8rem 2rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        /* Publications */
-        .publications-list {
-            display: grid;
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .publication-item {
-            border: 1px solid var(--accent-color);
-            padding: 1rem;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .publication-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .publication-image {
-            width: 150px;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        /* Projects Page */
-        .projects-container {
-            display: grid;
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .project-card {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
-
-        .project-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    <title>Dhanesh Raj - Personal Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="bio">
-            <h1>John Doe, PhD</h1>
-            <p>Senior Research Associate II at University Name</p>
-            <p>Research interests: Machine Learning, Data Science, Computational Biology</p>
-        </div>
-        <img src="profile.jpg" alt="John Doe" class="profile-img">
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="publications-list">
-        <div class="publication-item">
-            <h3>Publication Title 1</h3>
-            <p>2023 | Journal of Advanced Research</p>
-            <img src="pub1.jpg" alt="Publication 1" class="publication-image">
-            <p class="summary">Summary of publication 1...</p>
-        </div>
-        <!-- Add more publications -->
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-container">
-        <div class="project-card">
-            <h3>Research Project 1</h3>
-            <p>Project description...</p>
-        </div>
-        <!-- Add more projects -->
-    </section>
-
-    <!-- CV Section -->
-    <section id="cv">
-        <h2>Curriculum Vitae</h2>
-        <a href="cv.pdf" download class="download-btn">Download CV</a>
-        <!-- Add CV content -->
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-researchgate"></i></a>
-        </div>
-    </section>
-
-    <script>
-        // Scroll animations for project cards
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.project-card').forEach((card) => {
-            observer.observe(card);
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="research-interests.html">Research Interests</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="awards.html">Awards/Honor/Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="intro animate-on-load">
+            <div class="intro-left">
+                <img src="profile.jpg" alt="Profile Picture of Dhanesh Raj" class="profile-img click-animate" loading="lazy">
+                <h1 class="animate__animated animate__slideInDown">Dhanesh Raj</h1>
+                <p class="animate__animated animate__fadeInUp">Senior Research Associate</p>
+                <a href="mailto:mailid@gmail.com" class="btn click-animate animate__animated animate__fadeInUp">Email me</a>
+                <div class="social-icons animate__animated animate__fadeInUp">
+                    <a href="https://www.linkedin.com/in/dhaneshraj" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/dhanesh.raj" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://github.com/Dhanesh-raj" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><img src="github-icon.png" alt="GitHub"></a>
+                </div>
+                <div class="scholar-links animate__animated animate__fadeInUp">
+                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><img src="google-scholar-icon.png" alt="Google Scholar"></a>
+                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate" target="_blank" rel="noopener noreferrer"><img src="researchgate-icon.png" alt="ResearchGate"></a>
+                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID" target="_blank" rel="noopener noreferrer"><img src="orcid-icon.png" alt="ORCID"></a>
+                </div>
+                <div class="resume-portfolio-buttons animate__animated animate__fadeInUp">
+                    <a href="./resume.pdf" class="btn glow click-animate">Resume</a>
+                </div>
+                <div class="contact-info animate__animated animate__fadeInUp">
+                    <p>Address:<br>
+                       2nd Floor, Center for Wireless Networks and Applications<br>
+                       Amrita Vishwa Vidyapeetham<br>
+                       Amritapuri Campus</p>
+                    <p>Email:<br>
+                       <a href="mailto:dhaneshraj@am.amrita.edu">dhaneshraj@am.amrita.edu</a><br>
+                       <a href="mailto:dhaneshraj@ieee.org">dhaneshraj@ieee.org</a></p>
+                    <p>Phone Number:<br>
+                       +91 9846309356</p>
+                </div>
+            </div>
+            <div class="intro-right animate__animated animate__fadeIn">
+                <h2>About Me</h2>
+                <p>Currently pursuing my Ph.D. in Computer Engineering under Dr. Maneesha V Ramesh with research interests in wireless networks and pervasive computing, specifically Quality of Service (QoS) in marine 5G heterogeneous networks.</p>
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <ul>
+                        <li>
+                            <h3>PhD Student (2017 -- 2024)</h3>
+                            <p>Center for Wireless Networks & Applications, Amrita Vishwa Vidyapeetham, Kerala, India</p>
+                            <ul>
+                                <li>OceanNet – in developing Public Safety Networks and Mission Critical Services for fishermen based on real-time functional deployment of a mobile infrastructure for offshore communications and networking in the coastal region targeting to ensure effective communication whilst tackling natural disasters and hazards.</li>
+                                <li>Thesis Title - "<em>Service Provisioning in Resource Constrained Marine Vehicular IoT Networks in Extreme Environment</em>"</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>ICM Research Student (Feb -- July 2016)</h3>
+                            <p>Dept. of Information Engineering and Computer Science, University of Trento, Italy</p>
+                            <ul>
+                                <li>Research activity as part of Erasmus+ International Credit Mobility (ICM) student exchange, focusing on theoretical analysis and simulation of a DTN Architecture for Fishing Vessels; Cooperative Device-to-Device Communication and Resource Allocation in Cognitive Radio.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section id="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>
+                            <h3>Masters in Wireless Networks and Applications (2012 -- 2014)</h3>
+                            <p>Amrita Vishwa Vidyapeetham, Amritapuri, Kerala <strong>CGPA: 8/10</strong></p>
+                        </li>
+                        <li>
+                            <h3>Bachelors in Engineering (2004 -- 2008)</h3>
+                            <p>Anna University, Chennai - India <strong>CGPA: 8.2/10</strong></p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dhanesh Raj All Rights Reserved.</p>
+    </footer>
+    <script defer src="script.js"></script>
 </body>
 </html>

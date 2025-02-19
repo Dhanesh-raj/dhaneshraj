@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awards/Honor/Services - Dhanesh Raj</title>
+    <title>Awards - Dhanesh Raj</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
     <header class="sticky-header">
         <nav>
             <div class="logo">Dhanesh Raj</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="publications.html">Publications</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
+                <li><a href="research-interests.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
     </header>
     
+    <nav aria-label="breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Awards</li>
+        </ul>
+    </nav>
+    
     <main>
-        <section id="awards" class="section animate__animated animate__fadeInUp">
-            <h2>Awards/Honor/Services</h2>
+        <section id="awards" class="section">
+            <h2>Awards & Honors</h2>
             <ul>
                 <li>ICDCN 2023 Travel Conference Grant Award Winner</li>
-                <li>Published Papers in ICDCN -2023, 2017, COMSNETS - 2020 , INFOCOM, WiOpt, Springer journal - CSI Transactions on ICT</li>
-                <li>Phase II Winner - 5G Hackathon 2022, Dept of Telecommunication - Govt of India for "Public Safety and Mission Critical Services for Fishermen at Sea"</li>
-                <li>Phase I Winner- 5G Hackathon 2021, Dept of Telecommunication - Govt of India for "Public Safety and Mission Critical Services for Fishermen at Sea"</li>
+                <li>Phase II Winner - 5G Hackathon 2022, Dept of Telecommunication - Govt of India</li>
+                <li>Phase I Winner - 5G Hackathon 2021, Dept of Telecommunication - Govt of India</li>
                 <li>COMSNETS 2020 Travel Conference Grant Award Winner</li>
                 <li>ITRA Research Fellowship for MICRONET project</li>
-                <li>Amrita Bright Idea Award Winner 2013 for innovative idea on "Wireless Real Artificial Urinary Sphincter Control for Urinary Incontinence"</li>
-                <li>Amrita Innovation Seed Grant Winner 2013 for "Wireless Real Artificial Urinary Sphincter Control for Urinary Incontinence"</li>
+                <li>Amrita Bright Idea Award Winner 2013</li>
+                <li>Amrita Innovation Seed Grant Winner 2013</li>
             </ul>
         </section>
     </main>
@@ -44,8 +53,6 @@
         <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/dhanesh.raj" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://facebook.com/dhanesh.raj" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/dhanesh.raj" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>

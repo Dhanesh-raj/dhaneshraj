@@ -13,8 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Hamburger Menu Toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-        document.querySelector('.nav-links').classList.toggle('active');
+    // Responsive Navigation Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link (for mobile view)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+        });
     });
 });

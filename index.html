@@ -6,58 +6,71 @@
     <title>Dhanesh Raj - Interactive Resume</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <nav>
             <div class="logo">Dhanesh Raj</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#research-interests">Research Interests</a></li>
+                <li><a href="#research-interests">Research</a></li>
                 <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#awards">Awards/Honor/Services</a></li>
+                <li><a href="#awards">Awards</a></li>
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
     </header>
-    
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>Current Page</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <section id="home" class="section animate__animated animate__fadeInUp">
-            <h2>Welcome to My Portfolio</h2>
-            <img src="profile.jpg" alt="Dhanesh Raj" class="profile-img">
+        <section id="home" class="section">
+            <h1>Welcome to My Portfolio</h1>
+            <img src="images/profile.jpg" alt="Dhanesh Raj" class="profile-img">
             <p>Senior Research Associate | Wireless Networks Enthusiast</p>
         </section>
-        
-        <section id="projects" class="section animate__animated animate__fadeInUp">
+
+        <section id="projects" class="section">
             <h2>Projects</h2>
-            <p>Leading research in public safety networks and marine vehicular IoT networks.</p>
+            <p>Research in public safety networks and marine vehicular IoT.</p>
         </section>
-        
-        <section id="research-interests" class="section animate__animated animate__fadeInUp">
+
+        <section id="research-interests" class="section">
             <h2>Research Interests</h2>
             <p>Exploring 6G, ORAN, IoT, and propagation models.</p>
         </section>
-        
-        <section id="teaching" class="section animate__animated animate__fadeInUp">
+
+        <section id="teaching" class="section">
             <h2>Teaching</h2>
-            <p>Experienced in teaching wireless communication and networking courses.</p>
+            <p>Experienced in wireless communication and networking courses.</p>
         </section>
-        
-        <section id="awards" class="section animate__animated animate__fadeInUp">
+
+        <section id="awards" class="section">
             <h2>Awards & Honors</h2>
             <p>Recipient of multiple research grants and awards.</p>
         </section>
     </main>
-    
+
+    <!-- Footer with Social Links -->
     <footer>
         <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/dhanesh.raj" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://facebook.com/dhanesh.raj" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/dhanesh.raj" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>

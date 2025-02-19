@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awards/Honor/Services - Dhanesh Raj</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <nav>
-            <ul>
+            <div class="logo">Dhanesh Raj</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="publications.html">Publications</a></li>
@@ -17,10 +20,12 @@
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="awards.html">Awards/Honor/Services</a></li>
             </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
     </header>
+    
     <main>
-        <section id="awards">
+        <section id="awards" class="section animate__animated animate__fadeInUp">
             <h2>Awards/Honor/Services</h2>
             <ul>
                 <li>ICDCN 2023 Travel Conference Grant Award Winner</li>
@@ -34,13 +39,14 @@
             </ul>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
-        <div class="social-media">
-            <a href="https://www.linkedin/dhanesh.raj"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://www.facebook/dhanesh.raj"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram/dhanesh.raj"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="https://dhanesh-raj.github.io/dhaneshraj/"><i class="fab fa-github"></i></a>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dhanesh.raj" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://facebook.com/dhanesh.raj" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/dhanesh.raj" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 </body>

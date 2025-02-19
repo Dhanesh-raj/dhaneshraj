@@ -7,102 +7,64 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <nav>
-            <ul>
-                <li><a href="index.html">Main</a></li>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
+            <div class="logo">Dhanesh Raj</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
     </header>
+    
+    <section class="hero-section">
+        <video autoplay muted loop id="bg-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <h1>Dhanesh Raj</h1>
+            <p>Senior Research Associate | Wireless Networks Enthusiast</p>
+            <a href="./resume.pdf" class="btn primary">Download Resume</a>
+        </div>
+    </section>
+    
     <main>
-        <section class="video-background">
-            <video autoplay muted loop id="bg-video">
-                <source src="background.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <section id="about" class="section animate__animated animate__fadeInLeft">
+            <h2>About Me</h2>
+            <p>Ph.D. in Computer Engineering, specializing in Marine 5G Networks & Pervasive Computing.</p>
         </section>
-        <section class="intro animate-on-load">
-            <div class="intro-left">
-                <img src="profile.jpg" alt="Profile Picture of Dhanesh Raj" class="profile-img click-animate" loading="lazy">
-                <h1 class="animate__animated animate__slideInDown">Dhanesh Raj</h1>
-                <p class="animate__animated animate__fadeInUp">Senior Research Associate</p>
-                <a href="mailto:mailid@gmail.com" class="btn click-animate animate__animated animate__fadeInUp">Email me</a>
-                <div class="social-icons animate__animated animate__fadeInUp">
-                    <a href="https://www.linkedin.com/in/dhaneshraj" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="https://www.facebook.com/imdhaneshraj" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/dhanesh.raj" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
-                    <a href="https://github.com/Dhanesh-raj" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><img src="github-icon.png" alt="GitHub"></a>
-                </div>
-                <div class="scholar-links animate__animated animate__fadeInUp">
-                    <a href="https://scholar.google.com/citations?user=CSB7DU0AAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><img src="google-scholar-icon.png" alt="Google Scholar"></a>
-                    <a href="https://www.researchgate.net/profile/Dhanesh-Raj" aria-label="ResearchGate" target="_blank" rel="noopener noreferrer"><img src="researchgate-icon.png" alt="ResearchGate"></a>
-                    <a href="https://orcid.org/0000-0002-0558-1719" aria-label="ORCID" target="_blank" rel="noopener noreferrer"><img src="orcid-icon.png" alt="ORCID"></a>
-                </div>
-                <div class="resume-portfolio-buttons animate__animated animate__fadeInUp">
-                    <a href="./resume.pdf" class="btn glow click-animate">Resume</a>
-                </div>
-                <div class="contact-info animate__animated animate__fadeInUp">
-                    <p>Address:<br>
-                       2nd Floor, Center for Wireless Networks and Applications<br>
-                       Amrita Vishwa Vidyapeetham<br>
-                       Amritapuri Campus</p>
-                    <p>Email:<br>
-                       <a href="mailto:dhaneshraj@am.amrita.edu">dhaneshraj@am.amrita.edu</a><br>
-                       <a href="mailto:dhaneshraj@ieee.org">dhaneshraj@ieee.org</a></p>
-                    <p>Phone Number:<br>
-                       +91 9846309356</p>
-                </div>
-            </div>
-            <div class="intro-right animate__animated animate__fadeIn">
-                <h2>About Me</h2>
-                <p>Currently pursuing my Ph.D. in Computer Engineering under Dr. Maneesha V Ramesh with research interests in wireless networks and pervasive computing, specifically Quality of Service (QoS) in marine 5G heterogeneous networks.</p>
-                <section id="experience">
-                    <h2>Experience</h2>
-                    <ul>
-                        <li>
-                            <h3>PhD Student (2017 -- 2024)</h3>
-                            <p>Center for Wireless Networks & Applications, Amrita Vishwa Vidyapeetham, Kerala, India</p>
-                            <ul>
-                                <li>OceanNet – in developing Public Safety Networks and Mission Critical Services for fishermen based on real-time functional deployment of a mobile infrastructure for offshore communications and networking in the coastal region targeting to ensure effective communication whilst tackling natural disasters and hazards.</li>
-                                <li>Thesis Title - "<em>Service Provisioning in Resource Constrained Marine Vehicular IoT Networks in Extreme Environment</em>"</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>ICM Research Student (Feb -- July 2016)</h3>
-                            <p>Dept. of Information Engineering and Computer Science, University of Trento, Italy</p>
-                            <ul>
-                                <li>Research activity as part of Erasmus+ International Credit Mobility (ICM) student exchange, focusing on theoretical analysis and simulation of a DTN Architecture for Fishing Vessels; Cooperative Device-to-Device Communication and Resource Allocation in Cognitive Radio.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section id="education">
-                    <h2>Education</h2>
-                    <ul>
-                        <li>
-                            <h3>Masters in Wireless Networks and Applications (2012 -- 2014)</h3>
-                            <p>Amrita Vishwa Vidyapeetham, Amritapuri, Kerala <strong>CGPA: 8/10</strong></p>
-                        </li>
-                        <li>
-                            <h3>Bachelors in Engineering (2004 -- 2008)</h3>
-                            <p>Anna University, Chennai - India <strong>CGPA: 8.2/10</strong></p>
-                        </li>
-                    </ul>
-                </section>
+        
+        <section id="projects" class="section animate__animated animate__fadeInRight">
+            <h2>Projects</h2>
+            <p>Leading research in public safety networks and marine vehicular IoT networks.</p>
+        </section>
+
+        <section id="publications" class="section animate__animated animate__fadeInLeft">
+            <h2>Publications</h2>
+            <p>Contributed to IEEE, Elsevier, and Springer Journals.</p>
+        </section>
+
+        <section id="contact" class="section animate__animated animate__fadeInUp">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:dhaneshraj@am.amrita.edu">dhaneshraj@am.amrita.edu</a></p>
+            <p>Phone: +91 9846309356</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/dhaneshraj" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </section>
     </main>
+    
     <footer>
-        <p>&copy; 2024 Dhanesh Raj All Rights Reserved.</p>
+        <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
     </footer>
-    <script defer src="script.js"></script>
 </body>
 </html>

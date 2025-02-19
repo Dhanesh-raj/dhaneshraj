@@ -12,21 +12,36 @@
     <header class="sticky-header">
         <nav>
             <div class="logo">Dhanesh Raj</div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="publications.html">Publications</a></li>
-                <li><a href="research-interests.html">Research Interests</a></li>
+                <li><a href="research-interests.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="awards.html">Awards/Honor/Services</a></li>
+                <li><a href="awards.html">Awards</a></li>
             </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         </nav>
     </header>
     
+    <nav aria-label="breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Projects</li>
+        </ul>
+    </nav>
+    
     <main>
-        <section id="projects" class="section animate__animated animate__fadeInUp">
+        <section id="projects" class="section">
             <h2>Projects</h2>
-            <p>Leading research in public safety networks and marine vehicular IoT networks.</p>
+            <p>My research projects focus on:</p>
+            <ul>
+                <li>Public Safety and Mission-Critical Networks for Fishermen at Sea</li>
+                <li>Marine Vehicular IoT Networks</li>
+                <li>Delay-Tolerant Networks (DTN) for Extreme Environments</li>
+                <li>5G Network Optimization for Smart Cities</li>
+                <li>AI-Based Network Resource Allocation in ORAN</li>
+            </ul>
         </section>
     </main>
     
@@ -34,8 +49,6 @@
         <p>&copy; 2024 Dhanesh Raj. All Rights Reserved.</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/dhanesh.raj" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://facebook.com/dhanesh.raj" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/dhanesh.raj" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Dhanesh-raj" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
